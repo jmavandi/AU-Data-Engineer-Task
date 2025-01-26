@@ -19,6 +19,7 @@
 2. Scroll down to view the generated visualizations:
    - Top 10 Players with the Most Goals Added (g+)
    - Atlanta United FC Rolling Points Per Game Over The Season
+   - All 2024 MLS Teams Guaranteed Salaries Compared
 
 ## Technical Implementation
 
