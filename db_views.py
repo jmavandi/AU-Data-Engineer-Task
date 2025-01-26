@@ -45,5 +45,4 @@ def get_total_guaranteed_salaries_for_all_teams():
     cur.execute("SELECT team, total_guar FROM TeamSalaries ORDER BY team ASC")
     total_salaries = cur.fetchall()
     total_salaries = [{"team": row[0], "total_guar": row[1]} for row in total_salaries]
-    print(total_salaries)
     return total_salaries
