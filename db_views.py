@@ -37,3 +37,13 @@ def get_rolling_ppg_for_team(team_name):
         rolling_ppg_object[match[0]] = rolling_ppg
         
     return rolling_ppg_object
+
+def get_total_guaranteed_salaries_for_all_teams():
+    """Returns the total guaranteed salaries for all teams"""
+    conn = db.get_postgres_connection()
+    cur = conn.cursor()
+    cur.execute("SELECT team, total_guar FROM TeamSalaries ORDER BY team ASC")
+    total_salaries = cur.fetchall()
+    total_salaries = [{"team": row[0], "total_guar": row[1]} for row in total_salaries]
+    print(total_salaries)
+    return total_salaries
